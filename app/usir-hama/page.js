@@ -7,7 +7,7 @@ import BoxBurung from "../components/BoxBurung";
 
 import mqtt from "mqtt";
 
-const usirHama = () => {
+const UsirHama = () => {
   const [client, setClient] = useState(null);
 
   useEffect(() => {
@@ -80,4 +80,4 @@ const usirHama = () => {
   );
 };
 
-export default usirHama;
+export default UsirHama;
