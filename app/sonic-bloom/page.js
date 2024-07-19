@@ -5,6 +5,9 @@ import NavBar2 from "../components/NavBar2";
 import Image from "next/image";
 import mqtt from "mqtt";
 import axios from "axios";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const ScheduleBox = ({ id, time, onDelete, timeleft }) => {
   return (
@@ -43,7 +46,7 @@ const SonicBloom = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5050/get_schedule");
+        const response = await axios.get(process.env.GET_URL);
         setDataSchedule(response.data);
       } catch (error) {
         setError(error.message);
@@ -65,7 +68,7 @@ const SonicBloom = () => {
 
   const postData = async () => {
     try {
-      await axios.post("http://localhost:5050/post_schedule", {
+      await axios.post(process.env.POST_URL, {
         name: type,
         time: time,
         code: Date.now(),
@@ -79,7 +82,7 @@ const SonicBloom = () => {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5050/delete_schedule/${id}`
+        `${process.env.DELETE_URL}/${id}`
       );
       console.log("Response data:", response.data);
       console.log("ID to delete:", id);
