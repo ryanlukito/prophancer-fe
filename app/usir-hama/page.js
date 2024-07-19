@@ -50,11 +50,10 @@ const UsirHama = () => {
   return (
     <div className="w-screen h-screen flex flex-col">
       <div>
-        <NavBar2 title="USIR HAMA" />
+        <NavBar2>USIR HAMA</NavBar2>
       </div>
       <div className="flex justify-center items-center flex-grow md:h-[80vh]">
         <BoxTikus
-          title="Usir Tikus"
           handler={() =>
             tikusHandler({
               id: Date.now(),
@@ -63,9 +62,8 @@ const UsirHama = () => {
               propvalue: 1,
             })
           }
-        />
+        >Usir Tikus</BoxTikus>
         <BoxBurung
-          title="Usir Burung"
           handler={() =>
             burungHandler({
               id: Date.now(),
@@ -74,7 +72,7 @@ const UsirHama = () => {
               propvalue: 1,
             })
           }
-        />
+        >Usir Burung</BoxBurung>
       </div>
     </div>
   );
