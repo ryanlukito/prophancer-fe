@@ -46,7 +46,7 @@ const SonicBloom = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(process.env.GET_URL);
+        const response = await axios.get("https://prophanceralazhar-be-deploy.vercel.app/get_schedule");
         setDataSchedule(response.data);
       } catch (error) {
         setError(error.message);
@@ -68,7 +68,7 @@ const SonicBloom = () => {
 
   const postData = async () => {
     try {
-      await axios.post(process.env.POST_URL, {
+      await axios.post("https://prophanceralazhar-be-deploy.vercel.app/post_schedule", {
         name: type,
         time: time,
         code: Date.now(),
@@ -82,7 +82,7 @@ const SonicBloom = () => {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(
-        `${process.env.DELETE_URL}/${id}`
+        `https://prophanceralazhar-be-deploy.vercel.app/delete_schedule/${id}`
       );
       console.log("Response data:", response.data);
       console.log("ID to delete:", id);
@@ -94,7 +94,7 @@ const SonicBloom = () => {
 
   // mqtt config
   useEffect(() => {
-    const brokerUrl = "wss://broker.emqx.io:8083/mqtt";
+    const brokerUrl = "wss://broker.emqx.io:8084/mqtt";
     const options = {
       clientId: `mqtt_${Math.random().toString(16).slice(3)}`,
       keepAlive: 60,

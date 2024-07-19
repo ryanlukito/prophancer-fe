@@ -11,7 +11,7 @@ const UsirHama = () => {
   const [client, setClient] = useState(null);
 
   useEffect(() => {
-    const brokerUrl = "wss://broker.emqx.io:8083/mqtt";
+    const brokerUrl = "wss://broker.emqx.io:8084/mqtt";
     const options = {
       clientId: `mqtt_${Math.random().toString(16).slice(3)}`,
       keepAlive: 60,
