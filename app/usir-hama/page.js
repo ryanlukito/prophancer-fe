@@ -50,11 +50,11 @@ const UsirHama = () => {
   return (
     <div className="w-screen h-screen flex flex-col">
       <div>
-        <NavBar2 children="USIR HAMA" />
+        <NavBar2 title="USIR HAMA" />
       </div>
       <div className="flex justify-center items-center flex-grow md:h-[80vh]">
         <BoxTikus
-          children="Usir Tikus"
+          title="Usir Tikus"
           handler={() =>
             tikusHandler({
               id: Date.now(),
@@ -65,7 +65,7 @@ const UsirHama = () => {
           }
         />
         <BoxBurung
-          children="Usir Burung"
+          title="Usir Burung"
           handler={() =>
             burungHandler({
               id: Date.now(),

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const NavBar = ({children}) => {
+const NavBar = ({title}) => {
   return (
     <div className=" flex w-full h-full text-center text-white font-semibold bg-green-500 text-4xl p-5">
       <div className="flex flex-grow items-center">
@@ -14,7 +14,7 @@ const NavBar = ({children}) => {
         </Link>
       </div>
       <div className="flex flex-grow justify-center items-center">
-        {children}
+        {title}
       </div>
       <div className="flex flex-grow"></div>
     </div>

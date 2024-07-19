@@ -170,7 +170,7 @@ const SonicBloom = () => {
   return (
     <div className="w-screen h-[100vh] flex flex-col">
       <div>
-        <NavBar2 children="SONIC BLOOM"/>
+        <NavBar2 title="SONIC BLOOM"/>
       </div>
       <div className="flex flex-grow justify-center items-center h-[100vh] px-10">
         <div className="">

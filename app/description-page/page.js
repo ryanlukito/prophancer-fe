@@ -7,7 +7,7 @@ import Link from "next/link";
 const DescriptionPage = () => {
   return (
     <div className="bg-white">
-      <NavBar2 children={"Apa Itu PROPHANCER?"} />
+      <NavBar2 title={"Apa Itu PROPHANCER?"} />
       <div className="flex flex-row h-[98vh] p-10 justify-center drop-shadow-lg">
         <p className="text-sm bg-white h-fit p-5 rounded-md md:w-[500px]">
           Proident consectetur culpa commodo mollit aute nulla ea cupidatat
